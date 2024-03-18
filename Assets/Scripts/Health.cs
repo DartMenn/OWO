@@ -9,6 +9,10 @@ public class Health : MonoBehaviour
     public void GetDamage(float damage)
     {
         _value -= damage;
-    }
+        if (_value < 0)
+        {
+            Destroy(gameObject);
+        }
 
+    }
 }
